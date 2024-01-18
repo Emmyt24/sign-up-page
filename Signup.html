@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewpoint" content="width=device-width, initial-scalae=1.0">
+    <title>sign in and sign up</title>
+      <link rel=" stylesheet" href=" signup.css">  
+      <script src="https://kit.fontawesome.com/9a6ef2505f.js"></script>
+  </head>
+  <body>
+     <div class="container">
+       <div class="form-box">
+        <h1 id="textChange">Sign up</h1>
+        <form>
+          <div class="input-group">
+
+          <div class="input-item" id="nameField">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" placeholder="Username" required>
+          </div>
+          <div class="input-item">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" placeholder="Email Id" required>
+          </div>
+          <div class="input-item">
+            <i class="fa-regular fa-lock"></i>
+            <input type="password" placeholder="password" required>
+          </div>
+          <p>Lost Password? <a href="#"  >Click Here</a></p>
+           <div class="button-click">
+            <button type="button" id="signupbtn">Sign up</button>
+            <button type="button" id="signinbtn" class="disable">Sign in</button>
+           </div>
+        </form>
+       </div>
+     </div>
+
+     <script>
+      let signupbtn = document.getElementById("signupbtn");
+      let signinbtn = document.getElementById("signinbtn");
+      let nameField = document.getElementById("nameField");
+      let textChange = document.getElementById("textChange");
+
+      signinbtn.onclick= function(){
+        nameField.style.maxHeight = "0"
+        textChange.innerHTML ="Sign In";
+        signupbtn.classList.add("disable");
+        signinbtn.classList.remove("disable");
+
+      }
+     signupbtn.onclick =function(){
+        nameField.style.maxHeight = "60px";
+        textChange.innerHTML ="Sign up";
+        signinbtn.classList.add("disable");
+        signupbtn.classList.remove("disable");
+     }
+
+     </script>
+  </body>
+
+</html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!--  
+ 
+ 
+ <footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Terms and Conditions</h3>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Address</h3>
+        <p>123 Example Street</p>
+        <p>City, State, ZIP Code</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: example@example.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
